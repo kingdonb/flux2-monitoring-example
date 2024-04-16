@@ -6,7 +6,7 @@ spec:
   interval: 1h
   chart:
     spec:
-      version: ">=58.0.0"
+      version: "58.x"
       chart: kube-prometheus-stack
       sourceRef:
         kind: HelmRepository
