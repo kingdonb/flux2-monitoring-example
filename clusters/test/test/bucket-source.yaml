@@ -1,0 +1,15 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: Bucket
+metadata:
+  name: test-bucket
+  namespace: test-bucket
+spec:
+  bucketName: test-bucket
+  endpoint: minio.test-bucket.svc.cluster.local:9000
+  interval: 1m0s
+  provider: generic
+  certSecretRef:
+    name: bucket-secret
+  secretRef:
+    name: bucket-client-credentials
